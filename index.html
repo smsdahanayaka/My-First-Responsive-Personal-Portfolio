@@ -6,8 +6,8 @@
 <!-- UNICONS -->
     
 <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="">
-
+    <link rel="stylesheet" href="CSS/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css">
     <title>SMS Dahanayaka</title>
@@ -18,15 +18,15 @@
             <nav class="nav container">
                 <a href="#" class="nav_logo">Shan</a>
 
-            <div class="nav_menu" id="nav-menu">
+            <div class="nav_menu " id="nav-menu">
                 <ul class="nav_list grid">
                     <li class="nav_item">
-                        <a href="#home" class="nav_link">
+                        <a href="#home" class="nav_link active-link">
                             <i class="fa-solid fa-house nav_icon" ></i> Home
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#about" class="nav_link">
+                        <a href="#about" class="nav_link ">
                             <i class="fa-regular fa-user nav_icon"></i> About
                         </a>
                     </li>
@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#services" class="nav_link">
+                        <a href="#service" class="nav_link">
                             <i class="fa-solid fa-briefcase nav_icon"></i> Services
                         </a>
                     </li>
@@ -54,6 +54,9 @@
                 <i class="nav_close fa-solid fa-xmark nav_close nav_icon" id="nav-close"></i>
             </div>
                 <div class="nav_btns">
+                    <!-- Theme change button -->
+                    <i class="fa-solid fa-cloud-moon change-theme nav_icon" id="theme-button"></i>
+
                     <div class="nav_toggle" id="nav-toggle">
                         <i class="fa-brands fa-figma nav_icon"></i>
                     </div>
@@ -64,63 +67,66 @@
     <main class="main">
             <!-- ======================================== home ========================================-->
             <section class="home section" id="home">
-                <div class="homr_container container grid">
-                    <div class="home_content grid">
-                        <div class="home_social">
-                            <a href="https://www.linkedin.com/in/shan-m-dahanayaka/" target="_blank" class="home_social-icon">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.facebook.com/" target="_blank" class="home_social-icon">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://github.com/smsdahanayaka" target="_blank" class="home_social-icon">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="home_img">
-                            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home_blob-img" x="12" y="18" href="img/perfil.png"/>
-                                </g>
-                            </svg>
-                            
-                        </div>
-                        <div class="home_data">
-                            <h1 class="home_title">Hi, I'am Shan</h1>
-                            <h3 class="home_subtitle">Full Stack Developer</h3>
-                            <p class="home_description">High level experience in web desing and development knowledge, prooducing quality work.</p>
-                            <a href="#contact" class="button button--flex">
-                               Contact Me... <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                            </a>
+                <div class="home_container container grid">
                     
+                        <div class="home_content grid ">
+                            <div class="home_social">
+                                <a href="https://www.linkedin.com/in/shan-m-dahanayaka/" target="_blank" class="home_social-icon">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.facebook.com/" target="_blank" class="home_social-icon">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://github.com/smsdahanayaka" target="_blank" class="home_social-icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="home_img" >
+                                <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <mask id="mask0" mask-type="alpha">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                        <image class="home_blob-img" x="12" y="4" href="img/pro_pic1.PNG" />
+                                    </g>
+                                </svg>
+                                
+                            </div>
+                            <div class="home_data">
+                                <h1 class="home_title">Hi, I'am Shan</h1>
+                                <h3 class="home_subtitle">Full Stack Developer</h3>
+                                <p class="home_description">High level experience in web desing and development knowledge, prooducing quality work.</p>
+                                <a href="#contact" class="button button--flex">
+                                Contact Me... <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                </a>
+                        
+                            </div>
                         </div>
-                    </div>
-                    <div class="home_scroll">
-                        <a href="#about" class="home_scroll-button button--flex">
-                            <i class="fa-solid fa-computer-mouse home_scroll-mouse">
-                                <span class="home_scroll-name">Scroll Down</span>
-                                <i class="fa-solid fa-arrow-down home_scroll-arrow"></i>
-                            </i>
-                        </a>
-                    </div>
+                        <div class="home_scroll grid">
+                            <a href="#about" class="home_scroll-button button--flex">
+                                <i class="fa-solid fa-computer-mouse home_scroll-mouse">
+                                    <span class="home_scroll-name">Scroll Down</span>
+                                    <i class="fa-solid fa-arrow-down home_scroll-arrow"></i>
+                                </i>
+                            </a>
+                        </div>
+                    
                 </div>
             </section>
             <!-- ======================================== about ======================================== -->
             <section class="about section" id="about">
-                <h2 class="section_title">About Me</h2>
+                <div class="container">
+                    <h2 class="section_title">About Me</h2>
                 <span class="section_subtitle">My Introduction</span>
 
-                <div class="about_container container grid">
+                <div class="about_container  grid">
                     <img src="img/about.jpg" alt="" class="about_img">
 
                     <div class="about_data">
@@ -149,15 +155,17 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                
             </section>
 
             <!-- ======================================== skills Section ====================== -->
-            <section class="skill_section" id="skills">
+            <section class="skill_section section" id="skills">
                 <h2 class="section_title">Skills</h2>
                 <span class="section_subtitle">My technical level</span>
 
                 <div class="skill_container container grid">
-                    <div>
+                    <div class="row skill_container-inner">
                         <!----------------------- skill 1 --------------------------->
                         <div class="skills_content skills_open">
                             <div class="skills_header">
@@ -265,7 +273,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                     <div>
                         <!----------------------- skill 3 --------------------------->
                         <div class="skills_content skills_close">
@@ -321,31 +329,625 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
                 </div>
             </section>
-            <!-- qualifications -->
 
-            <!-- services -->
+            <!--======================================== qualifications ========================================-->
+            <section class="qualification section">
+                <div class="container">
+                    
+
+                        <h2 class="section_title">Qualifications</h2>
+                        <span class="section_subtitle">My Personal journey</span>
+                        
+                        <div class="qualification_container row">
+                            <div class="qualification_tabs">
+                                <div class="qualification_button button--flex qualification_active" data-target='#education'>
+                                    <i class="fa-solid fa-graduation-cap qualification_icon"></i>
+                                    Education
+                                </div>
+                                <div class="qualification_button button--flex" data-target="#working">
+                                    <i class="fa-solid fa-briefcase qualification_icon"></i>
+                                    Work
+                                </div>
+                            </div>
+                            <div class="qualification_sections">
+                                <!--/////// qualification content 1 \\\\\\\-->
+                                <div class="qualification_content qualification_active" data-content id="education">
+                                    
+        
+                                    
+                                    <!-- qualification 1 -->
+                                    <div class="qualification_data">
+                                        
+                                        
+                                        <div>
+                                        <h3 class="qualification_title">Java (Certified Master)</h3>
+                                        <span class="qualification_subtitle">Institute of computer engineering technology</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2022-2023
+                                        </div> 
+                                        </div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <span class="qualification_line"></span>
+                                        </div>
+                                        
+                                    </div>
+        
+                                    <!-- qualification 2 -->
+                                    <div class="qualification_data">
+                                        <div></div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <!-- <span class="qualification_line"></span> -->
+                                        </div>
+                                        <div>
+                                        <h3 class="qualification_title">full stack developer</h3>
+                                        <span class="qualification_subtitle">University of Moratuwa(DP Education)</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2019-2023
+                                        </div> 
+                                        </div>
+                                    
+                                    </div>
+        
+                                    <!-- qualification 3 -->
+                                    <div class="qualification_data">
+                                        <div>
+                                        <h3 class="qualification_title">B.Sc [hons] in Engineering</h3>
+                                        <span class="qualification_subtitle">University of CINEC</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2019-2023
+                                        </div> 
+                                        </div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <span class="qualification_line"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- qualification 4 -->
+                                    <div class="qualification_data">
+                                        <div></div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <!-- <span class="qualification_line"></span> -->
+                                        </div>
+                                        <div>
+                                        <h3 class="qualification_title">Bachelor of information technology</h3>
+                                        <span class="qualification_subtitle">UCSC - University of Colombo</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2021-2024
+                                        </div> 
+                                        </div>
+                                        
+                                    </div>
+        
+        
+        
+                                </div>
+        
+                                <!--/////// qualification content 2 \\\\\\\-->
+                                <div class="qualification_content" data-content id="working">
+                                    
+                                    
+                                    <!-- qualification 1 -->
+                                    <div class="qualification_data">
+                                        <div></div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <!-- <span class="qualification_line"></span> -->
+                                        </div>
+                                        <div>
+                                        <h3 class="qualification_title">Java Developer</h3>
+                                        <span class="qualification_subtitle">Institute of computer engineering technology</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2023-2023
+                                        </div> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <!-- qualification 2 -->
+                                    <div class="qualification_data">
+                                        <div>
+                                        <h3 class="qualification_title">Training Software Engineer</h3>
+                                        <span class="qualification_subtitle">Code-Link International</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2022-2023
+                                        </div> 
+                                        </div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <span class="qualification_line"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- qualification 3 -->
+                                    <div class="qualification_data">
+                                        <div></div>
+                                        <div>
+                                            <span class="qualification_rounder"></span>
+                                            <!-- <span class="qualification_line"></span> -->
+                                        </div>
+                                        <div>
+                                        <h3 class="qualification_title">Trainee Engineer</h3>
+                                        <span class="qualification_subtitle">DIMO Lanka</span> 
+                                        <div class="qualification_calender">
+                                                <i class="fa-solid fa-calendar-days qualification_icon"></i>
+                                                2022-2022
+                                        </div> 
+                                        </div>
+                                        
+                                    </div>
+        
+        
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                    
+                </div>
+                
+            </section>
+            <!--======================================== services ========================================-->
+            <section class="service section" id="service">
+                <h2 class="section_title">Services</h2>
+                <span class="section_subtitle">What I Offer</span>
+                <div class="container">
+                    <div class="services_container row ">
+
+                        <!-- Service 1 -->
+                        <div class="services_content col-lg-3 col-md-6 col-sm-12 col-12 ">
+                            <div>
+                                <i class="fa-solid fa-border-all services_icons"></i>
+                                
+                                 <h3 class="services_title">Ui/Ux <br> Designer</h3>
+                            </div>
+    
+                            <span class="button button--flex button--small button--link services_button">
+                                View More
+                                <i class="fa-solid fa-arrow-right button_icon"></i>
+                            </span>
+                            <div class="services_modal">
+                                <div class="services_modal-content">
+                                    <h4 class="services_modal-title">Ui/Ux <br> Designer</h4>
+                                    <i class="fa-regular fa-rectangle-xmark services_modal-close"></i>
+    
+                                    <ul class="services_modal-services grid">
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I develop the user interface.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> Web page development.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I create ux element interactions.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I position your company brand.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <!-- Service 2 -->
+                        <div class="services_content col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div>
+                                <i class="fa-solid fa-code services_icons"></i>
+                                
+                                 <h3 class="services_title">Frontend <br> Developer</h3>
+                            </div>
+    
+                            <span class="button button--flex button--small button--link services_button">
+                                View More
+                                <i class="fa-solid fa-arrow-right button_icon"></i>
+                            </span>
+                            <div class="services_modal">
+                                <div class="services_modal-content">
+                                    <h4 class="services_modal-title">Frontend <br> Developer</h4>
+                                    <i class="fa-regular fa-rectangle-xmark services_modal-close"></i>
+    
+                                    <ul class="services_modal-services grid">
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I develop the user interface.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p>  Web page development.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I create ux element interactions.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I position your company brand.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <!-- Service 3 -->
+                        <div class="services_content col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div>
+                                
+                                <i class="fa-solid fa-pen services_icons"></i>
+                                 <h3 class="services_title">branding <br> Designer</h3>
+                            </div>
+    
+                            <span class="button button--flex button--small button--link services_button">
+                                View More
+                                <i class="fa-solid fa-arrow-right button_icon"></i>
+                            </span>
+                            <div class="services_modal  ">
+                                <div class="services_modal-content">
+                                    <h4 class="services_modal-title">Ui/Ux <br> Designer</h4>
+                                    <i class="fa-regular fa-rectangle-xmark services_modal-close"></i>
+    
+                                    <ul class="services_modal-services grid">
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I develop the user interface.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> Web page development.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I create ux element interactions.</p>
+                                        </li>
+    
+                                        <li class="services_modal-service ">
+                                            <i class="fa-regular fa-circle-check services_modal-icon"></i>
+                                            <p> I position your company brand.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                
+
+            </section>
+
+            <!--======================================== portfolio ========================================-->
+            <section class="portfolio section" id="portfolio">
+                <div class="container">
+                    
+                        <h2 class="section_title">Portfolio</h2>
+                    <span class="section_subtitle">Most recent works</span>
+
+                    <div class="portfolio_container  swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- portfolio 1 -->
+                            <div class="portfolio_content grid swiper-slide">   
+                                <img src="img/portfolio1.jpg" alt="" class="portfolio_img">
+
+                                <div class="portfolio_data">
+                                    <h3 class="portfolio_title">Modern website</h3>
+                                    <p class="portfolio_description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                    <a href="#" class="button button--flex button--small portfolio_button">
+                                        Demo
+                                        <i class="fa-solid fa-arrow-right button_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- portfolio 2 -->
+                            <div class="portfolio_content grid swiper-slide">   
+                                <img src="img/portfolio2.jpg" alt="" class="portfolio_img">
+
+                                <div class="portfolio_data">
+                                    <h3 class="portfolio_title">Brand Designer</h3>
+                                    <p class="portfolio_description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                    <a href="#" class="button button--flex button--small portfolio_button">
+                                        Demo
+                                        <i class="fa-solid fa-arrow-right button_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- portfolio 3 -->
+                            <div class="portfolio_content grid swiper-slide">   
+                                <img src="img/portfolio3.jpg" alt="" class="portfolio_img">
+
+                                <div class="portfolio_data">
+                                    <h3 class="portfolio_title">Online Store</h3>
+                                    <p class="portfolio_description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                    <a href="#" class="button button--flex button--small portfolio_button">
+                                        Demo
+                                        <i class="fa-solid fa-arrow-right button_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- aadd arrow and pagination -->
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-chevron-right swiper-portfolio-icon"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="fa-solid fa-chevron-left swiper-portfolio-icon"></i>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                    <!-- </div> -->
+                </div>
+                    
+                    
+            </section>
+
+            <!--======================================== project in mind ========================================-->
+            <sectin class="section project">
+                <div class="project_bg">
+                    <div class="project_container container grid">
+                        <div class="project_data">
+                            <h2 class="project_title">You have a new project</h2>
+                            <p class="project_descriptin">Contact me now and get 30% discount on your new project</p>
+                            <a href="#contact" class="button button--flex button--white">
+                                Contact Me
+                                <i class="fa-solid fa-arrow-right-from-bracket button_icon"></i>
+                            </a>
+                        </div>
+                        <img src="img/bnr-1.png" alt="" class="project_img">
+                    </div>
+                </div>
+            </sectin>
+
+            <!--======================================== testimonial ========================================-->
+            <section class="testimonial section ">
+                <h2 class="section_title">Testimonial</h2>
+                <span class="section_subtitle">My client saying</span>
+                
+                <div class="testimonial_container container swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- testimonial 1 -->
+                        <div class="testimonial_content swiper-slide ">
+                            <div class="testimonial_data row">
+
+                                <div class="testimonial_header col-lg-6 col-md-12 col-12">
+                                    <img src="img/testimonial2 (1).jpg" alt="" class="testimonial_img">
+                                    <div>
+                                        <h3 class="testimonial_name">SMS dahanayaka</h3>
+                                        <span class="testimonial_client">Client</span>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-12">
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                </div>
+                            </div>
+                             <p class="testimonial-description">
+                                I got a good Impression, I carry out my project with all the possible quality and attention and support 24 hours a day.
+                             </p>
+                        </div>
+
+                        <!-- testimonial 2 -->
+                        <div class="testimonial_content swiper-slide">
+                            <div class="testimonial_data">
+                                <div class="testimonial_header">
+                                    <img src="img/testimonial1.jpg" alt="" class="testimonial_img">
+                                    <div>
+                                        <h3 class="testimonial_name">dahanayaka</h3>
+                                        <span class="testimonial_client">Client</span>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                </div>
+                            </div>
+                             <p class="testimonial-description">
+                                I got a good Impression, I carry out my project with all the possible quality and attention and support 24 hours a day.
+                             </p>
+                        </div>
 
 
-            <!-- portfolio -->
+                        <!-- testimonial 2 -->
+                        <div class="testimonial_content swiper-slide">
+                            <div class="testimonial_data">
+                                <div class="testimonial_header">
+                                    <img src="img/testimonial3.jpg" alt="" class="testimonial_img">
+                                    <div>
+                                        <h3 class="testimonial_name">SMS dahanayaka</h3>
+                                        <span class="testimonial_client">Client</span>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                    <i class="fa-regular fa-star testimonial_icon-star"></i>
+                                </div>
+                            </div>
+                             <p class="testimonial-description">
+                                I got a good Impression, I carry out my project with all the possible quality and attention and support 24 hours a day.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination1"></div>
+  
+                </div>
+            </section>
+
+            <!--======================================== contact me ========================================-->
+            <section class="contact section" id="contact">
+                <h2 class="section_title">Contact Me</h2>
+                <span class="section_subtitle">Get in touch</span>
+               
+                <div class="contact_container container grid">
+                    <div class="row">
+                        <div>
+                            <!-- contact info 1 -->
+                            <div class="contact_information">
+                                <i class="fa-solid fa-phone contact_icon"></i>
+                                <div>
+                                    <h3 class="contact_title">Call Me</h3>
+                                    <span class="contact_subtitle">+94 71 574 6038</span>
+                                </div>
+                            </div>
+
+                            <!-- contact info 2 -->
+                            <div class="contact_information">
+                                <i class="fa-brands fa-whatsapp contact_icon"></i>
+                                <div>
+                                    <h3 class="contact_title">Whatsapp </h3>
+                                    <span class="contact_subtitle">+94 74 300 8779</span>
+                                </div>
+                            </div>
+
+                            <!-- contact info 3 -->
+                            <div class="contact_information">
+                                
+                                <i class="fa-regular fa-envelope contact_icon"></i>
+                                <div>
+                                    <h3 class="contact_title">Email</h3>
+                                    <span class="contact_subtitle">smsdahanayaka@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <!-- contact info 4 -->
+                            <div class="contact_information">
+                                <i class="fa-solid fa-map-location-dot contact_icon"></i>
+                                <div>
+                                    <h3 class="contact_title">Location</h3>
+                                    <span class="contact_subtitle">Malabe - Sri Lanka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="" class="contact_form grid">
+                            <div class="contact-inputs grid">
+                                <div class="contact_content">
+                                    <label for="" class="contact_label">Name</label>
+                                    <input type="text" class="contact_input">
+                                </div>
+                                <div class="contact_content">
+                                    <label for="" class="contact_label">Email</label>
+                                    <input type="email" class="contact_input">
+                                </div>
+                            </div>
+                            <div class="contact_content">
+                                <label for="" class="contact_label">Project</label>
+                                <input type="text" class="contact_input">
+                            </div>
+                            <div class="contact_content">
+                                <label for="" class="contact_label">Message</label>
+                                <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                            </div>
+                            <div>
+                                <a href="#" class="button button--flex">
+                                    Send Message
+                                    <i class="fa-solid fa-arrow-right-from-bracket button_icon"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+    
+    
+        </main>
+    <!--======================= FOOTER ===============================-->
+        <footer class="footer">
+            <div class="footer_bg container-fluid">
+                <div class="footer_container container grid">
+                    <div>
+                        <h1 class="footer_title">Shan</h1>
+                        <span class="footer_subtitle">Fullstack developer</span>
+                    </div>
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#service" class="footer_link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer_link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer_link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer_socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer_social">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://github.com/smsdahanayaka"  target="_blank" class="footer_social">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shan-m-dahanayaka/"  target="_blank" class="footer_social">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/"  target="_blank" class="footer_social">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer_copy"> &#169; shan-m-dahanayaka. All right reserved</p>
+
+            </div>
 
 
-            <!-- project in mind -->
+        </footer>
 
 
-            <!-- testimonial -->
+
+    <!--=========================== SCROLLER TOP===================== -->
+
+        <a href="#" class="scrollUp" id="scroll-up">
+            <i class="fa-solid fa-arrow-up scrollup_icon"></i>
+        </a>
 
 
-            <!-- contact me -->
-    </main>
-    <!-- FOOTER -->
 
-    <!-- SCROLLER TOP -->
 
     <!-- SWIPER JS -->
-    <script src="">
+    <script src="JS/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js">
 
     </script>
     <!-- font awsome -->
