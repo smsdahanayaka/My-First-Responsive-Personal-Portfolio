@@ -1,0 +1,6 @@
+Poppins - google fonts
+	Regular 400
+	Regular 500
+	SemiBold 600
+
+icon 30-48-80
