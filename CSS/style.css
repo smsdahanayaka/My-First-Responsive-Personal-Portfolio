@@ -11,6 +11,7 @@
 
         /* HSL colour mode */
 
+    --very-first-color:hsl(var(--hue-color), 77%, 33%);
     --first-color:hsl(var(--hue-color), 69%, 61%);
     --first-color-second:hsl(var(--hue-color), 69%, 61%);
     --first-color-alt:hsl(var(--hue-color), 57%, 53%);
@@ -23,11 +24,12 @@
     --scroll-bar-color:hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color:hsl(var(--hue-color), 12%, 80%);
     --container-color:#FFF;
+    --container-color--colour:#ffff;
 
 /* font and typography */
 --body-font:'Poppins', sans-serif;;
     /* .5rem=8px , 1rem=16px , 1.5rem=24px  */
-
+    --big-big-font-size:3rem;
     --big-font-size:2rem;
     --h1-font-size:1.5rem;
     --h2-font-size:1.25rem;
@@ -62,6 +64,7 @@
 /* Font size for large devices */
 @media screen and (min-width : 968px) {
     :root{
+      --big-big-font-size:4rem;
         --big-font-size:3rem;
         --h1-font-size:2.25rem;
         --h2-font-size:1.5rem;
@@ -79,7 +82,7 @@
 body.dark-theme{
        /* HSL colour mode */
 
-   
+        --container-color--colour:hsl(var(--hue-color), 29%, 16%);
        --first-color-second:hsl(var(--hue-color), 30%, 8 %);
        --title-color:hsl(var(--hue-color), 8%, 95%);
        --text-color:hsl(var(--hue-color), 8%, 75%);
@@ -92,13 +95,17 @@ body.dark-theme{
 /* Button dark/light */
 .nav_btns{
   display: flex;
-  align-items: center;
+ 
 }
 .change-theme{
   font-size: 1.25rem;
   color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  
 }
 
 .change-theme:hover{
@@ -110,8 +117,8 @@ body.dark-theme{
 /*=======================  base =======================  */
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0 ;
+    margin: 0 0 0 0 ;
 }
 
 html{
@@ -126,6 +133,7 @@ body{
     color: var(--text-color);
 
 }
+
 
 h1,h2,h3,h4{
     color: var(--title-color);
@@ -147,11 +155,16 @@ img{
     height: auto;
 }
 
+.container{
+  padding: 0 0 0 0;
+  border: 0;
+}
 /* ============================= */
 
 /* re-susable css classes */
 .section{
-    padding: 2rem 0 4rem;
+    padding: 50px 0 100px 0;
+    border: 0 ;
 }
 
 .section_title{
@@ -195,6 +208,13 @@ background-color: var(--boady-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
+}
+.nav_logo{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  
 }
 .nav_logo,.nav_toggle{
     color: var(--title-color);
@@ -204,6 +224,7 @@ background-color: var(--boady-color);
     color: var(--first-color);
 }
 .nav_toggle{
+
     font-size: 1.1rem;
     cursor: pointer;
 }
@@ -211,8 +232,8 @@ background-color: var(--boady-color);
     color: var(--first-color);
 }
 .nav_menu{
-    
-    margin-bottom:120px ;
+    padding-bottom: 200px;
+    margin-top:0px ;
 }
 @media screen and (max-width:768px) {
      .nav_menu{
@@ -226,10 +247,47 @@ background-color: var(--boady-color);
         box-shadow: 0 -1px 4px rgba(0,0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: 0.3s;
+        
      }
+     .nav_list{
+      grid-template-columns: repeat(3,auto)!important;
+      gap:1rem;
+    }
+     
+    .nav_toggle{
+      margin-left:100px ;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+     .nav_logo{
+        
+        position: fixed;
+        top: -1000px;
+        left: 0;
+      
+    }
+    .nav_btns{
+      position: flex;
+    }
+
+    .change-theme{
+      
+      padding: 0;
+      margin: 0; 
+    }
+
+    .nav_close{
+      position: absolute;
+      right: 1.3rem !important;
+      bottom: 3.5rem !important;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--first-color);
+  }
+  
 }
 .nav_list{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
     gap:2rem;
 }
 .nav_link{
@@ -239,6 +297,7 @@ background-color: var(--boady-color);
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
+    margin: 10px;
 
 }
 .nav_link:hover{
@@ -249,8 +308,8 @@ background-color: var(--boady-color);
 }
 .nav_close{
     position: absolute;
-    right: 1.3rem;
-    bottom: .5rem;
+    right: -1.3rem;
+    bottom: -.5rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--first-color);
@@ -315,6 +374,9 @@ background-color: var(--boady-color);
 
   .home_title{
     font-size: var(--big-font-size);
+  }
+  .home_title>span{
+    color: var(--very-first-color);
   }
 
   .home_subtitle{
@@ -402,7 +464,12 @@ background-color: var(--boady-color);
   }
 /* ============================= */
 /* ======================= about ======================= */
-  .about_img{
+.about{
+  background-color: var(--container-color--colour);
+ 
+  
+}  
+.about_img{
     width: 300px;
     border-radius: .5rem;
     justify-self: center;
@@ -575,7 +642,9 @@ background-color: var(--boady-color);
 
 
 /*======================= qlificationv ======================= */
-
+.qualification{
+  background-color: var(--container-color--colour);
+}
 .qualification_tabs {
   display: flex;
   justify-content: space-evenly;
@@ -653,8 +722,8 @@ background-color: var(--boady-color);
 
 /* ======================= services ======================= */
 .services_container{
-  padding: 15px;
-  margin: 20px;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -757,6 +826,9 @@ background-color: var(--boady-color);
 
 
 /* ======================= portfolio ======================= */
+.portfolio{
+  background-color: var(--container-color--colour);
+}
 .portfolio_container{
   overflow: initial;
 }
@@ -846,6 +918,9 @@ background-color: var(--boady-color);
 
 
 /* ======================= testimnial ======================= */
+.testimonial{
+  background-color: var(--container-color--colour);
+}
 .testimonial_data,
 .testimonial_header{
   display: flex;
