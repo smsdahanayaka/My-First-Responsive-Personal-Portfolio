@@ -95,33 +95,6 @@ const skillsContent=document.getElementsByClassName('skills_content'),
             })
            })
      }) 
-// portpolio swiper
-let swiper = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop   :true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-    },
-    
-  });
-
-// testimonial
-var swiper1 = new Swiper(".testimonial_container", {
-    loop:true,
-    grabCursor:true,
-    spaceBetween:48,
-
-    pagination: {
-      el: ".swiper-pagination1",
-      clickable:true,
-      dynamicbullets:true,
-    },
-  });
 
 //   Scroll sections active link
 const sections = document.querySelectorAll('section[id]')
@@ -195,3 +168,52 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+// portpolio swipper
+
+const swiperProject = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    loop   :true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    
+  });
+
+  
+// project swiper
+let swiper = new Swiper(".portfolio_container", {
+    cssMode: true,
+    loop   :true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable:true,
+    },
+    
+  });
+
+
+// testimonial
+var swiper1 = new Swiper(".testimonial_container", {
+    loop:true,
+    grabCursor:true,
+    spaceBetween:48,
+    
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable:true,
+      dynamicbullets:true,
+    },
+  });
